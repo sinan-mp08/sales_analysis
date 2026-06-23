@@ -1,0 +1,946 @@
+/* ==========================================================
+   IMPORT FONT
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+
+/* ==========================================================
+   ROOT COLORS
+========================================================== */
+
+:root{
+
+--bg:#0B1220;
+
+--card:#161F2F;
+
+--card2:#1D2940;
+
+--border:#2B3954;
+
+--primary:#4F8EF7;
+
+--success:#22C55E;
+
+--warning:#F59E0B;
+
+--danger:#EF4444;
+
+--text:#FFFFFF;
+
+--muted:#94A3B8;
+
+}
+
+
+/* ==========================================================
+   GLOBAL
+========================================================== */
+
+*{
+
+font-family:'Inter',sans-serif;
+
+}
+
+html,
+body{
+
+background:var(--bg);
+
+color:var(--text);
+
+}
+
+.stApp{
+
+background:var(--bg);
+
+}
+
+
+/* ==========================================================
+   REMOVE STREAMLIT DEFAULTS
+========================================================== */
+
+header{
+
+visibility:hidden;
+
+}
+
+footer{
+
+visibility:hidden;
+
+}
+
+#MainMenu{
+
+visibility:hidden;
+
+}
+
+[data-testid="collapsedControl"]{
+
+display:none;
+
+}
+
+
+/* ==========================================================
+   MAIN PADDING
+========================================================== */
+
+.block-container{
+
+padding-top:1.2rem;
+
+padding-left:2rem;
+
+padding-right:2rem;
+
+padding-bottom:2rem;
+
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.top-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:linear-gradient(135deg,#182235,#111827);
+
+padding:22px 30px;
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+margin-bottom:25px;
+
+}
+
+
+.title{
+
+font-size:34px;
+
+font-weight:800;
+
+color:white;
+
+letter-spacing:.3px;
+
+}
+
+
+.subtitle{
+
+margin-top:6px;
+
+font-size:15px;
+
+color:var(--muted);
+
+}
+
+
+.header-right{
+
+display:flex;
+
+gap:16px;
+
+}
+
+
+/* ==========================================================
+   HEADER INFO CARDS
+========================================================== */
+
+.header-card{
+
+width:120px;
+
+padding:16px;
+
+background:#1D2940;
+
+border-radius:18px;
+
+border:1px solid var(--border);
+
+text-align:center;
+
+transition:.35s;
+
+cursor:pointer;
+
+color:white;
+
+}
+
+.header-card:hover{
+
+transform:translateY(-5px);
+
+background:#253552;
+
+box-shadow:0 10px 25px rgba(79,142,247,.20);
+
+}
+
+.header-card span{
+
+display:block;
+
+margin-top:8px;
+
+font-size:13px;
+
+color:var(--muted);
+
+}
+
+
+/* ==========================================================
+   NAVIGATION
+========================================================== */
+
+.st-emotion-cache-1rtdyuf{
+
+background:transparent;
+
+}
+
+.nav-link{
+
+padding:14px 24px;
+
+border-radius:12px;
+
+transition:.3s;
+
+}
+
+
+/* ==========================================================
+   FILTER AREA
+========================================================== */
+
+.filter-container{
+
+background:var(--card);
+
+padding:20px;
+
+border-radius:20px;
+
+border:1px solid var(--border);
+
+margin-bottom:25px;
+
+box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+}
+
+
+/* ==========================================================
+   SELECT BOX
+========================================================== */
+
+.stSelectbox>div>div{
+
+background:var(--card2);
+
+border-radius:14px;
+
+border:1px solid var(--border);
+
+color:white;
+
+transition:.25s;
+
+}
+
+.stSelectbox>div>div:hover{
+
+border-color:var(--primary);
+
+}
+
+
+/* ==========================================================
+   DATE INPUT
+========================================================== */
+
+.stDateInput>div>div{
+
+background:var(--card2);
+
+border-radius:14px;
+
+border:1px solid var(--border);
+
+}
+
+
+/* ==========================================================
+   SEARCH BOX
+========================================================== */
+
+.stTextInput input{
+
+background:var(--card2);
+
+border-radius:14px;
+
+border:1px solid var(--border);
+
+color:white;
+
+padding:10px;
+
+}
+
+.stTextInput input:focus{
+
+border:1px solid var(--primary);
+
+}
+
+
+/* ==========================================================
+   KPI CARD
+========================================================== */
+
+.kpi-card{
+
+background:linear-gradient(145deg,#1B263B,#141C2B);
+
+padding:20px;
+
+border-radius:20px;
+
+border:1px solid var(--border);
+
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+transition:.35s;
+
+cursor:pointer;
+
+position:relative;
+
+overflow:hidden;
+
+min-height:130px;
+
+}
+
+
+.kpi-card:before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:4px;
+
+background:linear-gradient(90deg,#4F8EF7,#22C55E);
+
+}
+
+
+.kpi-card:hover{
+
+transform:translateY(-7px);
+
+box-shadow:0 18px 40px rgba(0,0,0,.35);
+
+}
+
+
+.kpi-top{
+
+font-size:14px;
+
+color:var(--muted);
+
+}
+
+
+.kpi-number{
+
+margin-top:14px;
+
+font-size:32px;
+
+font-weight:800;
+
+color:white;
+
+}
+
+
+.kpi-footer{
+
+margin-top:12px;
+
+font-size:13px;
+
+color:#7DD3FC;
+
+}
+
+
+/* ==========================================================
+   METRIC
+========================================================== */
+
+[data-testid="metric-container"]{
+
+background:linear-gradient(145deg,#1B263B,#141C2B);
+
+border:1px solid var(--border);
+
+border-radius:18px;
+
+padding:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+transition:.3s;
+
+}
+
+[data-testid="metric-container"]:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+/* ==========================================================
+   DIVIDER
+========================================================== */
+
+hr{
+
+border:none;
+
+height:1px;
+
+background:#2E3C58;
+
+margin-top:20px;
+
+margin-bottom:20px;
+
+}
+
+/* ==========================================================
+   CHART CONTAINERS
+========================================================== */
+
+[data-testid="stPlotlyChart"]{
+
+background:linear-gradient(145deg,#182235,#111827);
+
+padding:18px;
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+box-shadow:0 15px 35px rgba(0,0,0,.28);
+
+margin-bottom:22px;
+
+transition:.35s;
+
+}
+
+[data-testid="stPlotlyChart"]:hover{
+
+transform:translateY(-4px);
+
+border:1px solid #3B82F6;
+
+box-shadow:0 20px 45px rgba(59,130,246,.18);
+
+}
+
+
+/* ==========================================================
+   PLOTLY MODEBAR
+========================================================== */
+
+.modebar{
+
+background:transparent !important;
+
+}
+
+.modebar-btn{
+
+color:#94A3B8 !important;
+
+}
+
+.modebar-btn:hover{
+
+color:white !important;
+
+}
+
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.stButton>button{
+
+width:100%;
+
+background:linear-gradient(135deg,#2563EB,#3B82F6);
+
+color:white;
+
+border:none;
+
+border-radius:14px;
+
+padding:12px;
+
+font-weight:600;
+
+font-size:15px;
+
+transition:.3s;
+
+box-shadow:0 10px 25px rgba(37,99,235,.25);
+
+}
+
+.stButton>button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 18px 35px rgba(37,99,235,.35);
+
+}
+
+
+/* ==========================================================
+   DOWNLOAD BUTTON
+========================================================== */
+
+.stDownloadButton>button{
+
+width:100%;
+
+background:#16A34A;
+
+color:white;
+
+border:none;
+
+border-radius:14px;
+
+padding:12px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.stDownloadButton>button:hover{
+
+background:#15803D;
+
+}
+
+
+/* ==========================================================
+   TABS
+========================================================== */
+
+.stTabs{
+
+margin-top:10px;
+
+}
+
+.stTabs [role="tab"]{
+
+border-radius:14px;
+
+padding:12px 22px;
+
+background:#182235;
+
+margin-right:10px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.stTabs [aria-selected="true"]{
+
+background:#2563EB;
+
+color:white;
+
+}
+
+
+/* ==========================================================
+   EXPANDER
+========================================================== */
+
+.streamlit-expanderHeader{
+
+background:#182235;
+
+border-radius:14px;
+
+padding:10px;
+
+font-weight:600;
+
+}
+
+
+/* ==========================================================
+   DATAFRAME
+========================================================== */
+
+[data-testid="stDataFrame"]{
+
+border-radius:18px;
+
+overflow:hidden;
+
+border:1px solid var(--border);
+
+}
+
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+height:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#111827;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#334155;
+
+border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#4F8EF7;
+
+}
+
+
+/* ==========================================================
+   SUCCESS / INFO BOXES
+========================================================== */
+
+.stAlert{
+
+border-radius:16px;
+
+border:none;
+
+}
+
+
+/* ==========================================================
+   SPACING
+========================================================== */
+
+.element-container{
+
+margin-bottom:12px;
+
+}
+
+
+/* ==========================================================
+   HORIZONTAL RULE
+========================================================== */
+
+hr{
+
+border:none;
+
+height:1px;
+
+background:#2E3C58;
+
+margin:20px 0;
+
+}
+
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.kpi-card{
+
+animation:fadeUp .6s ease;
+
+}
+
+[data-testid="stPlotlyChart"]{
+
+animation:fadeUp .8s ease;
+
+}
+
+
+/* ==========================================================
+   PAGE TITLE
+========================================================== */
+
+h1{
+
+font-size:36px;
+
+font-weight:800;
+
+color:white;
+
+margin-bottom:15px;
+
+}
+
+h2{
+
+font-size:28px;
+
+font-weight:700;
+
+color:white;
+
+}
+
+h3{
+
+font-size:22px;
+
+font-weight:600;
+
+color:white;
+
+}
+
+
+/* ==========================================================
+   CAPTION
+========================================================== */
+
+.caption{
+
+color:#94A3B8;
+
+font-size:13px;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1200px){
+
+.header-right{
+
+flex-wrap:wrap;
+
+}
+
+.top-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:20px;
+
+}
+
+.title{
+
+font-size:30px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.block-container{
+
+padding-left:1rem;
+
+padding-right:1rem;
+
+}
+
+.title{
+
+font-size:24px;
+
+}
+
+.subtitle{
+
+font-size:13px;
+
+}
+
+.header-card{
+
+width:100%;
+
+}
+
+.kpi-number{
+
+font-size:26px;
+
+}
+
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.footer{
+
+margin-top:40px;
+
+padding:20px;
+
+text-align:center;
+
+color:#94A3B8;
+
+font-size:14px;
+
+border-top:1px solid var(--border);
+
+}
+
+
+/* ==========================================================
+   LOGO BADGE
+========================================================== */
+
+.logo-badge{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+width:48px;
+
+height:48px;
+
+border-radius:14px;
+
+background:linear-gradient(135deg,#2563EB,#22C55E);
+
+font-size:24px;
+
+margin-right:12px;
+
+box-shadow:0 10px 25px rgba(37,99,235,.3);
+
+}
+
+
+/* ==========================================================
+   CARD HOVER GLOW
+========================================================== */
+
+.kpi-card:hover,
+[data-testid="metric-container"]:hover,
+[data-testid="stPlotlyChart"]:hover{
+
+box-shadow:
+0 20px 45px rgba(0,0,0,.35),
+0 0 25px rgba(59,130,246,.15);
+
+}
+
+
+/* ==========================================================
+   END
+========================================================== */
