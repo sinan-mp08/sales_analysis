@@ -86,3 +86,36 @@ def overview_page(filtered_df):
         top_products(filtered_df),
         use_container_width=True,
     )
+    st.markdown("---")
+    st.subheader("📋 Sales Transactions")
+
+    display_df = filtered_df[
+        [
+            "OrderDate",
+            "CustomerName",
+            "Category",
+            "SubCategory",
+            "ProductName",
+            "Region",
+            "Sales",
+            "Profit",
+            "Quantity",
+        ]
+    ].copy()
+
+    display_df["Sales"] = display_df["Sales"].map(lambda x: f"₹{x:,.2f}")
+
+    display_df["Profit"] = display_df["Profit"].map(lambda x: f"₹{x:,.2f}")
+
+    rows = st.selectbox(
+        "Show Records",
+        [10, 25, 50, 100],
+        index=1,
+    )
+
+    st.data_editor(
+        display_df.head(rows),
+        use_container_width=True,
+        hide_index=True,
+        disabled=True,
+    )
